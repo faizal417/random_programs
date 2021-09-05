@@ -32,21 +32,21 @@ def calorie_count():
 def fat_count():
     global fat
     if fat_percentage==1:
-        fat=body_weight*0.7
+        fat=body_weight*0.7*9
         return fat
     else:
-        fat=body_weight*1
+        fat=body_weight*1*9
         return fat
 def protein_count():
     global protein
-    protein=body_weight*1.5
+    protein=body_weight*1.5*4
     return protein
 def carb_count():
     global carb
-    carb=((calories-(fat+protein))/4)
+    carb=((calories-(fat+protein)))
     return carb
-    
-print(calorie_count())
-print(fat_count())
-print (protein_count())
-print(carb_count())
+
+print("Total calories required are:",calorie_count())
+print("Total fat calories:",fat_count())
+print ("Total protein calories:",protein_count())
+print("Total carb calories:",carb_count())
